@@ -8,7 +8,7 @@ export class Header extends Component {
             <div class="container">
            
                 <div>
-                    <a class="logo" href="index.html">Landrick<span class="text-primary">.</span></a>
+                    <a class="logo" href="index.html">HackerBrews!!<span class="text-primary">.</span></a>
                 </div>                 
                 <div class="buy-button">
                     <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">{this.props.name}</a>
@@ -30,60 +30,36 @@ export class Header extends Component {
                 <div id="navigation">
              
                     <ul class="navigation-menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html"></a></li>
                         <li class="has-submenu active">
-                            <a href="javascript:void(0)">Landing</a><span class="menu-arrow"></span>
+                            <a href="javascript:void(0)"></a><span class="menu-arrow"></span>
                             <ul class="submenu megamenu">
                                 <li class="active">
                                     <ul>
-                                        <li><a href="index-saas.html">Saas</a></li>
-                                        <li class="active"><a href="index-agency.html">Agency</a></li>
-                                        <li><a href="index-apps.html">Application</a></li>
-                                        <li><a href="index-studio.html">Studio</a></li>
-                                        <li><a href="index-business.html">Business</a></li>
-                                        <li><a href="index-modern-business.html">Modern Business</a></li>
-                                        <li><a href="index-hotel.html">Hotel</a></li>
-                                        <li><a href="index-marketing.html">Marketing</a></li>
-                                        <li><a href="index-enterprise.html">Enterprise </a></li>
-                                        <li><a href="index-coworking.html">Coworking</a></li>
-                                        <li><a href="index-cloud-hosting.html">Cloud Hosting</a></li>
-                                        <li><a href="index-event.html">Event</a></li>
+                                       
                                     </ul>
                                 </li>
                                 <li>
-                                    <ul>
-                                        <li><a href="index-course.html">Course </a></li>
-                                        <li><a href="index-personal.html">Personal </a></li>
-                                        <li><a href="index-single-product.html">Product </a></li>
-                                        <li><a href="index-portfolio.html">Portfolio </a></li>
-                                        <li><a href="index-services.html">Service </a></li>
-                                        <li><a href="index-payments.html">Payments </a></li>
-                                        <li><a href="index-crypto.html">Cryptocurrency </a></li>
-                                        <li><a href="index-software.html">Software </a></li>
-                                        <li><a href="index-job.html">Job <span class="badge badge-danger rounded"> v1.6 </span> </a></li>
-                                        <li><a href="index-customer.html">Customer <span class="badge badge-danger rounded"> v1.6 </span> </a></li>
-                                        <li><a href="index-onepage.html">Saas <span class="badge badge-warning rounded ml-2">Onepage</span></a></li>
-                                        <li><a href="index-rtl.html">RTL Version <span class="badge badge-primary rounded ml-2">RTL</span></a></li>
-                                    </ul>
+                                  
                                 </li>   
                             </ul>
                         </li>
         
                         <li class="has-submenu">
-                            <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+                            <a href="javascript:void(0)"></a>
                             <ul class="submenu">
                                 <li><a href="page-aboutus.html"> About Us</a></li>
                                 <li><a href="page-services.html">Services</a></li>
                                 <li><a href="page-pricing.html">Pricing</a></li>
                                 <li><a href="page-team.html"> Team</a></li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Account <span class="badge badge-danger rounded"> v1.6 </span></a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> Account <span class="badge badge-danger rounded"> v1.6 </span></a>
                                     <ul class="submenu">
                                         <li><a href="page-profile.html">Profile <span class="badge badge-primary rounded">New</span></a></li>
                                         <li><a href="page-profile-edit.html">Account Setting <span class="badge badge-primary rounded">New</span></a></li>
                                         <li><a href="page-invoice.html">Invoice <span class="badge badge-primary rounded">New</span></a></li>
                                     </ul>  
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Careers <span class="badge badge-success rounded"> Added </span></a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)">  <span class="badge badge-success rounded"> Added </span></a><span class="submenu-arrow"></span>
                                     <ul class="submenu">
                                         <li><a href="page-jobs.html">Jobs</a></li>
                                         <li><a href="page-job-detail.html">Job Detail</a></li>
@@ -92,20 +68,20 @@ export class Header extends Component {
                                         <li><a href="page-job-candidate.html">Candidate <span class="badge badge-success rounded"> New </span></a></li>
                                     </ul>  
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Blog</a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> Blog</a>
                                     <ul class="submenu">
                                         <li><a href="page-blog.html">Blog Grid</a></li>
                                         <li><a href="page-blog-sidebar.html">Blog with Sidebar</a></li>
                                         <li><a href="page-blog-detail.html">Blog Detail</a></li>
                                     </ul>  
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Works</a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> Works</a>
                                     <ul class="submenu">
                                         <li><a href="page-work.html">Works Grid</a></li>
                                         <li><a href="page-work-detail.html">Work Detail</a></li>
                                     </ul>  
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> User </a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> User </a>
                                     <ul class="submenu">
                                         <li><a href="page-login.html">Login</a></li>
                                         <li><a href="page-signup.html">Signup</a></li>
@@ -115,13 +91,13 @@ export class Header extends Component {
                                         <li><a href="page-cover-re-password.html">Recovery Password 2</a></li>
                                     </ul>  
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Utility </a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> Utility </a>
                                     <ul class="submenu">
                                         <li><a href="page-terms.html">Terms of Services</a></li>
                                         <li><a href="page-privacy.html">Privacy Policy</a></li>
                                     </ul>  
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Special </a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> Special </a>
                                     <ul class="submenu">
                                         <li><a href="page-comingsoon.html">Coming Soon</a></li>
                                         <li><a href="page-comingsoon2.html">Coming Soon Two </a></li>
@@ -129,7 +105,7 @@ export class Header extends Component {
                                         <li><a href="page-error.html">Error</a></li>
                                     </ul>
                                 </li>
-                                <li class="has-submenu"><a href="javascript:void(0)"> Contact </a><span class="submenu-arrow"></span>
+                                <li class="has-submenu"><a href="javascript:void(0)"> Contact </a>
                                     <ul class="submenu">
                                         <li><a href="page-contact-detail.html">Contact Detail </a></li>
                                         <li><a href="page-contact-one.html">Contact One </a></li>
@@ -140,7 +116,7 @@ export class Header extends Component {
                             </ul>
                         </li>
                         <li class="has-submenu last-elements">
-                            <a href="javascript:void(0)">Docs</a><span class="menu-arrow"></span>
+                            <a href="javascript:void(0)"></a>
                             <ul class="submenu">
                                 <li><a href="documentation.html">Documentation </a></li>
                                 <li><a href="changelog.html">Changelog </a></li>

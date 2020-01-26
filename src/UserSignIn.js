@@ -321,11 +321,11 @@ export class UserSignIn extends Component {
                         <div class="row position-relative align-items-center pt-4">
                             <div class="col-lg-7 offset-lg-5">
                                 <div class="title-heading studio-home bg-white shadow mt-5">
-                                    <h1 class="heading mb-3">Present Your Work With <span class="text-primary">Landrick</span> Studio</h1>
-                                    <p class="para-desc text-muted">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                                    <h1 class="heading mb-3">Present Your Work With <span class="text-primary">HackerBrews!!</span> </h1>
+                                    <p class="para-desc text-muted">CodeShastra Hackathon.</p>
                                     <div class="mt-4">
                                         <a href="/AddProfile" class="btn btn-primary mt-2 mr-2"><i class="mdi mdi-phone"></i> Add Profile</a>
-                                        <a href="documentation.html" class="btn btn-outline-primary mt-2"><i class="mdi mdi-book-outline"></i> NGO'S </a>
+                                        <a class="btn btn-outline-primary mt-2"><i class="mdi mdi-book-outline"></i> NGO'S </a>
                                     </div>
                                 </div>
                             </div>
@@ -334,7 +334,7 @@ export class UserSignIn extends Component {
                 </div>
             </div>
         </section>
-                 <button style={{paddingTop:'100p'}} onClick={this.logout}>Logout</button> </>):(<>   <section class="cover-user bg-white">
+                 <button style={{paddingTop:'100p'}} class="btn btn-outline-primary m-3 mb-4" onClick={this.logout}>Logout</button> </>):(<>   <section class="cover-user bg-white">
             <div class="container-fluid">
                 <div class="row position-relative">
                     <div class="col-lg-4 cover-my-30 order-2">

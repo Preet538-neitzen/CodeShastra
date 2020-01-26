@@ -4,7 +4,7 @@ import Header from '../UpAndDown/Header'
 export class AfterUserSignIn extends Component {
     render() {
         return (
-            <div>
+            <div >
                  <Header name={this}/>
             </div>
         )

@@ -8,8 +8,8 @@ export class Footer extends Component {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
-                        <a class="logo-footer" href="#">Landrick<span class="text-primary">.</span></a>
-                        <p class="mt-4">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <a class="logo-footer" href="#">HackerBrews!!<span class="text-primary">.</span></a>
+                        <p class="mt-4">Start working with HackerBrews that can provide everything you need to generate awareness, drive traffic, connect.</p>
                         <ul class="list-unstyled social-icon social mb-0 mt-4">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

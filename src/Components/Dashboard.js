@@ -12,11 +12,10 @@ export class Dashboard extends Component {
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-md-7 order-1 order-md-2">
                                 <div class="title-heading mt-4 ml-lg-5">
-                                    <h1 class="heading mb-3">We are Startup Creative <span class="text-primary">Landrick</span> Agency</h1>
-                                    <p class="para-desc text-muted">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                                    <h1 class="heading mb-3">We are Startup Creative <span class="text-primary">HackerBrews!!</span> Agency</h1>
+                                    <p class="para-desc text-muted">CodeShastra hackathon.</p>
                                     <div class="watch-video mt-4 pt-2">
-                                        <a href="javascript:void(0)" class="btn btn-primary">Learn More <i class="mdi mdi-chevron-right"></i></a>
-                                        <a href="http://vimeo.com/99025203" class="video-play-icon watch text-dark mb-2 ml-2"><i class="mdi mdi-play play-icon-circle text-center d-inline-block mr-2 rounded-pill text-white position-relative play play-iconbar"></i> WATCH VIDEO</a>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +213,7 @@ export class Dashboard extends Component {
             </div>
         </section>
      
-     <Footer/>
+     {/* <Footer/> */}
     
       
     

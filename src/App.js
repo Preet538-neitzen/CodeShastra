@@ -12,6 +12,7 @@ import Header from './UpAndDown/Header'
 import Footer from './UpAndDown/Footer'
 import UserSignIn from './UserSignIn'
 import AddProfile from './Components/AddProfile'
+import NgoSignIn from './NGO/NgoSignIn'
 
 
 
@@ -44,6 +45,9 @@ class App extends Component{
                   </Route>
                   <Route exact path="/AddProfile">
                     <AddProfile/>
+                  </Route>
+                  <Route exact path="/NgoSignIn">
+                    <NgoSignIn/>
                   </Route>
                 </Switch>
               </div>
