@@ -1,21 +1,50 @@
 import React, { Component } from 'react'
-var Dropdown = require('react-simple-dropdown');
-var DropdownTrigger = Dropdown.DropdownTrigger;
-var DropdownContent = Dropdown.DropdownContent;
+import axios from 'axios'
+import Header from '../UpAndDown/Header'
+import GoogleMapReact from 'google-map-react';
+import {mdiMapMarker} from '@mdi/js'
+import Icon from '@mdi/react'
+
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
 
 export class AddProfile extends Component {
+    static defaultProps = {
+        center: {
+          lat: 20,
+          lng: 78,
+        },
+        zoom: 2
+      };
+    
     constructor(){
         super();
-       
         this.state = {
               displayMenu: false,
+              name:'',
+              address:'',
+              ngoName:'',
+              lastName:'',
+              typeOfNeedy:'',
+              city:'',
+              state:'',
+            //   center: {
+            //     lat:0,
+            //     lng: 0,
+            //   },
             };
        
          this.showDropdownMenu = this.showDropdownMenu.bind(this);
          this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
-       
+        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeCity = this.handleChangeCity.bind(this);
+        this.handleChangeType = this.handleChangeType.bind(this)
        };
 
+       handleChange(e){
+        this.setState({[e.target.name]: e.target.value});
+    }
     
 showDropdownMenu(event) {
     event.preventDefault();
@@ -31,9 +60,16 @@ showDropdownMenu(event) {
 
   }
 
+
+  
+
   componentDidMount() {
+
+
+ 
+
     var body = {
-        userName: 'Fred',
+        name: this,
         userEmail: 'Flintstone@gmail.com'
     }
     
@@ -49,15 +85,49 @@ showDropdownMenu(event) {
         console.log(error);
     });
   }
+
+  handleChangeCity(e){
+      this.setState({city:e.target.value})
+    if(e.target.value=='Mumbai' || e.target.value=='Pune' || e.target.value=='Nagpur' || e.target.value=='Thane' || e.target.value=='Ratnagiri'){
+        this.setState({state:'Maharashtra'})
+        this.setState({lat:21.1458})
+        this.setState({lng:79.0882})
+    }
+    if(e.target.value=='Jaipur' || e.target.value=='Jodhpur' || e.target.value=='Bikaner' || e.target.value=='Ajmer'){
+        this.setState({state:'Rajasthan'})
+        this.setState({lat:26.2389})
+        this.setState({lng:73.0243})
+        // window.location.reload();
+    }
+  }
+  handleChangeType(e){
+    this.setState({typeOfNeedy:e.target.value});
+    if(e.target.value=="Orphan" && this.state.state=='Maharashtra'){
+        this.setState({ngoName:'Sneha Sadan Orphanage'})
+    }
+    if(e.target.value=="Orphan" && this.state.state=='Rajasthan'){
+        this.setState({ngoName:'Sneha Sadan Orphanage'})
+    }
+    if(e.target.value=="Widow" && this.state.state=="Maharashtra"){
+        this.setState({ngoName:'Little Sisters of The Poor Home For Aged'})
+    }
+    if(e.target.value=="Widow" && this.state.state=="Rajasthan"){
+        this.setState({ngoName:'Andhakshi Ashram'})
+    }
+    if(e.target.value=="Old Age"){
+        this.setState({ngoName:''})
+    }
+    if(e.target.value=="Poverty"){
+        this.setState({ngoName:''})
+    }
+
+  }
   
 
     render() {
-
-
-        
         return (
             <div>
-          
+          <Header/>
     
         <section class="section pb-0">
           
@@ -75,40 +145,65 @@ showDropdownMenu(event) {
                                             <div class="form-group position-relative">
                                                 <label> Name <span class="text-danger">*</span></label>
                                                 <i class="mdi mdi-account ml-3 icons"></i>
-                                                <input name="name" id="name" type="text" class="form-control pl-5" placeholder="First Name :"/>
+                                                <input name="name" value={this.state.name}  onChange={this.handleChange} id="name" type="text" class="form-control pl-5" placeholder="First Name :"/>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group position-relative">
                                                 <label>Surname <span class="text-danger">*</span></label>
                                                 <i class="mdi mdi-email ml-3 icons"></i>
-                                                <input name="email" id="email" type="email" class="form-control pl-5" placeholder="Your email :"/>
+                                                <input value={this.state.lastName}  onChange={this.handleChange} name="lastName" id="lastName" type="email" class="form-control pl-5" placeholder="Surname :"/>
                                             </div> 
                                         </div>
                                         <div class="col-md-12">
-                                       
+                                        
                                    </div>
+                                               
+                                        <div class="col-md-6">
+                                            <div class="form-group position-relative">
+                                                <label>City</label>
+                                                <i class="mdi mdi-book ml-3 icons"></i>
+                                                <input value={this.state.city}   onChange={this.handleChangeCity} name="typeOfNeedy" id="typeOfNeedy" class="form-control pl-5" placeholder="(Enter his/her city) :"/>
+                                            </div>                                                                               
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group position-relative">
+                                                <label>State</label>
+                                                <i class="mdi mdi-book ml-3 icons"></i>
+                                                <input value={this.state.state}   onChange={this.handleChange} name="typeOfNeedy" id="typeOfNeedy" class="form-control pl-5" placeholder="(Autofilled)"/>
+                                            </div>                                                                               
+                                        </div>
+                                        <div style={{ height: '30vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: 'AIzaSyCT-jRtPJqNbV9NhKzHhoHSpWe6SVv3rMo' }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+          
+        >
+          <AnyReactComponent
+            lat={this.state.lat}
+            lng={this.state.lng}
+            text={<Icon path={mdiMapMarker}
+            size={1.4}/>}
+          />
+        </GoogleMapReact>
+      </div>
+                       
                                         <div class="col-md-12">
                                             <div class="form-group position-relative">
-                                                <label>Address</label>
+                                                <label>Type</label>
                                                 <i class="mdi mdi-book ml-3 icons"></i>
-                                                <input name="subject" id="subject" class="form-control pl-5" placeholder="Your subject :"/>
+                                                <input autoComplete='off' value={this.state.typeOfNeedy}   onChange={this.handleChangeType} name="typeOfNeedy" id="typeOfNeedy" class="form-control pl-5" placeholder="Need of person :"/>
                                             </div>                                                                               
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group position-relative">
                                                 <label>Name Of NGO</label>
                                                 <i class="mdi mdi-book ml-3 icons"></i>
-                                                <input name="subject" id="subject" class="form-control pl-5" placeholder="Your subject :"/>
+                                                <input value={this.state.ngoName} onChange={this.handleChange} name="ngoName" id="ngoName" class="form-control pl-5" placeholder="Your subject :"/>
                                             </div>                                                                               
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group position-relative">
-                                                <label>Comments</label>
-                                                <i class="mdi mdi-comment-text-outline ml-3 icons"></i>
-                                                <textarea name="comments" id="comments" rows="4" class="form-control pl-5" placeholder="Your Message :"></textarea>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12 text-center">
@@ -131,7 +226,7 @@ showDropdownMenu(event) {
                 <div class="row">
                     <div class="col-12 p-0">
                         <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" allowfullscreen=""></iframe>
+                          
                         </div>
                     </div>
                 </div>

@@ -369,6 +369,9 @@ export class UserSignIn extends Component {
               <div class="form-group">
                 <button class="btn-block btn btn-primary" type="submit" onClick={this.signup}>Sign Up</button>
               </div>
+              <div class="form-group">
+                <button class="btn-block btn btn-primary" type="submit" onClick={this.login}>Log In</button>
+              </div>
               <h7 style={{color:'red',fontWeight:'bold',paddingLeft:'75px'}}>{this.state.errorMessage}</h7> 
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="signup-agree"/>
